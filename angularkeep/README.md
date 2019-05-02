@@ -1,6 +1,21 @@
 # Angularkeep
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Here we have developed an Angular Keep App similar to https://keep.google.com/u/0/
+it allow us to enter note title and note text , 
+and consecutively it shows them as a note card on UI if user submit that note.
+
+
+1. Used Angular Material
+ --> components
+ --> Theme
+
+2. Two way binding using <ng-model>
+binding date 
+
+3. Used ngFor
+We can use this directive, if we want to display a dynamic list, for example, an array of elements on the screen.
+
 
 ## Development server
 
