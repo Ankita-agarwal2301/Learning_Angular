@@ -51,6 +51,77 @@ e.g
 #DAtaBinding
 <ngModel>
 
+#storing data in json
+create db.json in server folder(notes record)
+json-server server/db.json
+
+#REST API
+
+http://localhost:3000/notes :: GET
+http://localhost:3000/notes :: POST + data (note)
+
+
+#OBSERVABLE :
+Asynchronous programming : publish /subscribe
+
+REACTIVE PROGRAMMING - works with data and propogates the state changes : RxJS library
+let b=20;
+let c=10;
+let a = b+c;
+b=200;
+
+a----> 210(not 30)
+ (In Imperative programming it would be 30 only)
+
+OBSERVABLES provide support for passing messages between publishers and subscribers in your application. 
+In angular.io
+Docs- FUNDAMENTALS > Observables & RxJS https://angular.io/guide/observables
+
+RxJS LIBRARY 
+RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using observables that makes it easier to compose asynchronous or callback-based code 
+
+#Observables in Angular
+Angular makes use of observables as an interface to handle a variety of common asynchronous operations. For example:
+
+1. The EventEmitter class extends Observable.
+2. The HTTP module uses observables to handle AJAX requests and responses.
+3. The Router and Forms modules use observables to listen for and respond to user-input events.
+
+#HTTP
+Angular’s HttpClient returns observables from HTTP method calls. For instance, http.get(‘/api’) returns an observable
+The HTTP module uses observables to handle AJAX requests and responses.
+
+#Lifecyclehook:
+invoke as and when app loads
+
+code to read notes  as app loads , we write in ngOnInit
+
+import {HttpClientModule} from '@angular/common/hhtp'
+
+ then 
+ import {HttpClient} from '@angular/common/http' in component.ts
+
+#Dependency Injection
+HttpClient is injectable class , so instance is not created , it is injected
+
+
+#Service (injectable class)
+building blocks in angular application
+- any CRUD code
+- any authentication
+- routing
+
+ng g s name
+ng generate service name
+
+only 2 files created
+
+- supports unit tesing feature also
+
+
+
+
+
 
 
 

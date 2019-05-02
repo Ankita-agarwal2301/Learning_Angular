@@ -22,6 +22,13 @@ import {FormsModule} from '@angular/forms';
 //API reference for Angular Material card (Layout --> Card)
 import {MatCardModule} from '@angular/material/card';
 
+//HTtpClient module
+import {HttpClientModule} from '@angular/common/http'
+
+//for NoteService for Note CRUD
+import { NoteService } from './note.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +42,10 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,6 +16,10 @@ binding date
 3. Used ngFor
 We can use this directive, if we want to display a dynamic list, for example, an array of elements on the screen.
 
+4. use json for data storage
+- Observables
+- Dependency injection
+- Services
 
 ## Development server
 
