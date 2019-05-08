@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()"> 
+
+  <div>
+    <label for="username"></label>
+    <input type="text" placeholder="User Name" formControlName="username">
+    <small *ngIf="usernameMethod.invalid && (usernameMethod.dirty || usernameMethod.touched)">{{getUserNameError()}}</small>
+  </div>
+  <div>
+    <label for="password"></label>
+    <input type="password" placeholder="Password" formControlName="password">
+    <small *ngIf="passwordMethod.invalid && (passwordMethod.dirty || passwordMethod.touched)">
+    <small *ngIf ="passwordMethod.errors.required">Password cannot be left blank</small>
+    <small *ngIf ="passwordMethod.errors.minlength">Password cannot be less than 6</small>
+  </small>
+  </div>
+  <div>
+    <button [disabled] = "loginForm.invalid">Sign In</button>
+  </div>
+</form>
