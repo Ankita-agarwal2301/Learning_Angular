@@ -5,8 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Login page is made
 - which allows user to enter user name and password
 - and then validates them
+- Login successfull --> dashboard.html
 
-
+- used authentication server to check is username is admin and paasword is password , , then allows user to login
+- used routing guard to check if only authenticated users are allowed to login and see dashboard page.
 
 Notes:
 
@@ -30,6 +32,43 @@ it has property type of   FormControl - which defines form field
 3. create mapping on template (html form)
 
 4. implement validations
+
+5. Configuring Routing
+Login successfull --> dashboard.html
+
+-https://angular.io/guide/router
+- ng g s services/routing
+- import RouterModule , Routes
+- const
+-  in import wite RouterModule.forRoot(routes)
+- provide placeholder for component to load <router-outlet></router-outlet>
+
+now hit http://localhost:4200/login
+http://localhost:4200/dashboard
+
+- Route Gaurding
+      - The router supports multiple guard interfaces:
+
+        - CanActivate to mediate navigation to a route.
+        - CanActivateChild to mediate navigation to a child route.
+        - CanDeactivate to mediate navigation away from the current route.
+        - Resolve to perform route data retrieval before route activation.
+        - CanLoad to mediate navigation to a feature module loaded asynchronously.
+
+ng generate guard can-activate
+or
+ng g g can-activate
+
+then 
+{
+    //http://localhost:4200/dashboard
+    path:'dashboard',
+    component:DashboardComponent,
+    canActivate:[CanActivateGuard]
+  }
+
+  make canActivate function return false;
+now dashboard will not load 
 
 
 #References:
