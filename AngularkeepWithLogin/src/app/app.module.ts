@@ -34,6 +34,10 @@ import { RoutingService } from './services/routing.service';
 import { RouterModule, Routes } from '@angular/router';
 import { CanActivateGuard } from './can-activate.guard';
 import { LoginComponent } from './login/login.component';
+import { NoteTakerComponent } from './note-taker/note-taker.component';
+import { NoteViewComponent } from './note-view/note-view.component';
+import { ListViewComponent } from './list-view/list-view.component';
+import { NoteComponent } from './note/note.component';
 const routes: Routes=[
   {
     //http://localhost:4200/login
@@ -44,15 +48,34 @@ const routes: Routes=[
     //http://localhost:4200/dashboard
     path:'dashboard',
     component:DashboardComponent,
-    canActivate:[CanActivateGuard]
-  }
+    canActivate:[CanActivateGuard],
+    children:[{
+      path:'noteview',
+      component:NoteViewComponent
+    },{
+      path:'listview',
+      component:ListViewComponent
+    },{
+      path:'',
+      redirectTo:'noteview',
+      pathMatch:'full'
+    }]
+  },
+  {
+    path:'',
+    component:LoginComponent,
+    }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    NoteTakerComponent,
+    NoteViewComponent,
+    ListViewComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
