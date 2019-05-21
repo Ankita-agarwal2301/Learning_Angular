@@ -15,4 +15,16 @@ export class RoutingService {
   {
     this.router.navigate(['login']);
   }
+  toEdit(noteId)
+  {
+   // this.router.navigate(['dashboard','view','editview']);
+    // path :'note/:noteId/editview',
+    this.router.navigate(['dashboard',
+    {
+      outlets :
+      {
+        noteEditOutlet :['note',noteId,'editview']
+      }
+    }])
+  }
 }

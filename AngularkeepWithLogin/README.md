@@ -22,6 +22,7 @@ We can use this directive, if we want to display a dynamic list, for example, an
 - Services
 
 
+
 (Angular Login)
 
 - Login page is made
@@ -60,9 +61,46 @@ To achieve this :
 
 Now our each note is a component which in itself contain mat-card
 
-2. Edit eash note
+app-component
+    -- header
+    -- router-outlet
+            --login
+            --dashboard (guarded)
+                    --note-taker
+                    --note-view (default)
+                    --list-view
+                    --edit-view.........(in next session)
+
+.................................................................................
 
 
+Now what is happening is that if we add new note , then we have to refresh the browser to get it displayed on UI
+
+Solution :
+
+Observable:
+drawback : everytime the changes to data happen , its not subsribed to subscriber .
+
+# Behavior subject
+https://medium.com/@luukgruijs/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0
+
+https://alligator.io/rxjs/subjects/
+
+http://reactivex.io/rxjs/manual/overview.html
+
+The BehaviorSubject has the characteristic that it stores the “current” value. This means that you can always directly get the last emitted value from the BehaviorSubject.
+
+
+
+
+
+
+
+
+
+
+
+2. Edit each note
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

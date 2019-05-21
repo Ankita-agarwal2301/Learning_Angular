@@ -23,6 +23,8 @@ export class AuthenticationService {
 
   getToken():string
   {
+    console.log("seting"+localStorage.getItem('keeptoken'));
+    
     return localStorage.getItem('keeptoken');
   }
 
