@@ -1,11 +1,11 @@
-# Angularkeep
+## Angularkeep
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 Here we have developed an Angular Keep App similar to https://keep.google.com/u/0/
 it allow us to enter note title and note text , 
 and consecutively it shows them as a note card on UI if user submit that note.
 
-(Angular Keep)
+`Angular Keep`
 1. Used Angular Material
  --> components
  --> Theme
@@ -21,9 +21,7 @@ We can use this directive, if we want to display a dynamic list, for example, an
 - Dependency injection
 - Services
 
-
-
-(Angular Login)
+`Angular Login`
 
 - Login page is made
 - which allows user to enter user name and password
@@ -34,7 +32,8 @@ We can use this directive, if we want to display a dynamic list, for example, an
 - used routing guard to check if only authenticated users are allowed to login and see dashboard page.
 
 --------------------
-(Merged Keep App and Login app)
+## NEW SESSION
+(`Merged` Keep App and Login app)
 
 Now we will allow use to view note in list or grid view and also to edit note
 
@@ -72,35 +71,56 @@ app-component
                     --edit-view.........(in next session)
 
 .................................................................................
+## NEW SESSION
 
+1. Now what is happening is that if we add new note , then we have to refresh the browser to get it displayed on UI
 
-Now what is happening is that if we add new note , then we have to refresh the browser to get it displayed on UI
+`Observable`:
+drawback - everytime the changes to data happen , its not subsribed to subscriber .
 
-Solution :
+### Behavior subject
+[Behaviour subject refernece 1](https://medium.com/@luukgruijs/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0)
 
-Observable:
-drawback : everytime the changes to data happen , its not subsribed to subscriber .
+[Behaviour subject refernece 2](https://alligator.io/rxjs/subjects/)
 
-# Behavior subject
-https://medium.com/@luukgruijs/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0
-
-https://alligator.io/rxjs/subjects/
-
-http://reactivex.io/rxjs/manual/overview.html
+[Behaviour subject refernece 3](http://reactivex.io/rxjs/manual/overview.html)
 
 The BehaviorSubject has the characteristic that it stores the “current” value. This means that you can always directly get the last emitted value from the BehaviorSubject.
 
+- updated getAllNote() and pushNote() in noteService.ts to use Behaviour subject now.
+now if we add new noe , it will refresh in the browser.
 
 
 
+2. `Edit` each note
+
+ A - Make note clickable
+ B - Record id of note clicked
+ C - Open dialog that reads the id of note clicked
+ D - Fetch note by id
+ E - Update UI of Dialog with note data fetched by id
+ F - Add component for Edit ng g c editopener
+ G - Edit component should open over the existing view
+
+
+- Configure route for EditOpener
+        provided the named outlet for component to load (load in specific router outlet)
+- In dashboard we added a named router outlet
+- In routing service we 
+        - method for routing to edit was defined with noteId parameter
+        - routes to path with named outlet
+- Dialog
+        - Popups and modals - Dialog - MatDialogModule
+        - ng g c edit-view
+
+To add a component 3 ways -
+ - making use of selector
+ - routing
+ - entryComponents: [EditViewComponent]
+  
 
 
 
-
-
-
-
-2. Edit each note
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
