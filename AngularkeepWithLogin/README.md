@@ -94,6 +94,7 @@ now if we add new noe , it will refresh in the browser.
 
 2. `Edit` each note
 
+`To Do`
  - Make note clickable
  - Record id of note clicked
  - Open dialog that reads the id of note clicked
@@ -102,21 +103,21 @@ now if we add new noe , it will refresh in the browser.
  - Add component for Edit ng g c editopener
  - Edit component should open over the existing view
 
-
+`solution`
 - Configure route for EditOpener
-        provided the named outlet for component to load (load in specific router outlet)
+        : provided the named outlet for component to load (load in specific router outlet)
 - In dashboard we added a named router outlet
 - In routing service we 
-        - method for routing to edit was defined with noteId parameter
-        - routes to path with named outlet
+        :  method for routing to edit was defined with noteId parameter
+        : routes to path with named outlet
 - Dialog
-        - Popups and modals - Dialog - MatDialogModule
-        - ng g c edit-view
+        : Popups and modals - Dialog - MatDialogModule
+        : ng g c edit-view
 
-To add a component 3 ways -
- - making use of selector
- - routing
- - entryComponents: [EditViewComponent]
+- To add a component 3 ways -
+ : making use of selector
+ : routing
+ : entryComponents: [EditViewComponent]
   
 
 
