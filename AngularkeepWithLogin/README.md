@@ -94,13 +94,13 @@ now if we add new noe , it will refresh in the browser.
 
 2. `Edit` each note
 
- A - Make note clickable
- B - Record id of note clicked
- C - Open dialog that reads the id of note clicked
- D - Fetch note by id
- E - Update UI of Dialog with note data fetched by id
- F - Add component for Edit ng g c editopener
- G - Edit component should open over the existing view
+ - Make note clickable
+ - Record id of note clicked
+ - Open dialog that reads the id of note clicked
+ - Fetch note by id
+ - Update UI of Dialog with note data fetched by id
+ - Add component for Edit ng g c editopener
+ - Edit component should open over the existing view
 
 
 - Configure route for EditOpener
