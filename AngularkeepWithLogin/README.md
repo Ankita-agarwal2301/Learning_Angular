@@ -118,6 +118,47 @@ now if we add new noe , it will refresh in the browser.
  : making use of selector
  : routing
  : entryComponents: [EditViewComponent]
+
+
+ ----------------------------------------------------
+ ## NEW SESSION Unit Testing 
+
+`jasmine-core`. Jasmine is the framework we are going to use to create our tests. It has a bunch of functionalities to allow us the write different kinds of tests.
+`karma`. Karma is a task runner for our tests. It uses a configuration file in order to set the startup file, the reporters, the testing framework, the browser among other things. (provides environment)
+
+- Create an Angular project with jasmine and karma
+As the angular team recommends we are going to user angular-cli to create our app. By doing this the configuration of jasmine and karma comes resolved for us.
+
+[Reference for karma](https://karma-runner.github.io/latest/index.html)
+[Reference for karma - how it works](http://karma-runner.github.io/4.0/intro/how-it-works.html)
+[Reference for Jasmine](https://jasmine.github.io/2.0/introduction.html)
+
+Karma.conf.js
+- configuration 
+
+path to find all the test files location is mentioned in
+- test.ts 
+const context = require.context('../test/', true, /\.spec\.ts$/);
+// it will search in test folder
+- Karma is speedy , it is able to generate report for terminal and browser also , also it is watching .
+
+- `Stub`
+used to mock dependency 
+as we dont want to testing of other class in a particular class
+Stub is a class created  , and we tell dont use actual class but use our stub
+
+ providers: [{
+        provide: NoteService,
+        useClass: NoteServiceStub
+      }],       
+
+
+	  
+	  
+
+
+
+
   
 
 

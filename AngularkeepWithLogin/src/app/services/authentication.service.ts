@@ -33,6 +33,6 @@ export class AuthenticationService {
   return this.http.post('http://localhost:3000/auth/v1/isAuthenticated',null,{
   headers : new HttpHeaders().set('Authorization',`Bearer ${token}`)
 })
-.pipe(map(response=>response['isAuthenticated'])).toPromise();
+.pipe(map(response=>response['isAuthenticated'])).toPromise<boolean>();
   }
 }

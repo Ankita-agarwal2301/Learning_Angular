@@ -46,6 +46,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 const routes: Routes = [
   {
     //http://localhost:4200/login
+    path: '',
+    component: LoginComponent
+  },
+  {
+    //http://localhost:4200/login
     path: 'login',
     component: LoginComponent,
   },

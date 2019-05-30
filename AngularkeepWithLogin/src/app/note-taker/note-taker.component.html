@@ -1,10 +1,10 @@
-<mat-expansion-panel class="noteInputContainer">
+<!-- <mat-expansion-panel class="noteInputContainer">
   <mat-expansion-panel-header>
       <mat-panel-title>
        Note
         </mat-panel-title>
   </mat-expansion-panel-header>
-  <!-- <div class="noteInputs">
+  <div class="noteInputs">
       <mat-form-field>
   <input [(ngModel)]="note.title" matInput type="text" placeholder="Enter Note title">
       </mat-form-field>
@@ -15,7 +15,28 @@
     </mat-form-field>
 </div>
   <div class="noteButton">
-   <button mat-button (click)="takeNote()">Click Me</button>
-  </div> -->
+   <button mat-button (click)="takeNote()" value='Save'>Click Me</button>
+  </div>
 </mat-expansion-panel>
+ -->
+<!-- Note Input -->
 
+<mat-expansion-panel class="noteInputContainer">
+  <mat-expansion-panel-header>
+    <mat-panel-title>Take a note</mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <div class="noteInputs">
+    <!-- input for note title -->
+    <mat-form-field>
+      <input [(ngModel)] = "note.title" matInput type="text" placeholder="Enter Note Title">
+    </mat-form-field>
+    <!-- input for note text -->
+    <mat-form-field>
+      <textarea [(ngModel)] = "note.text" matInput placeholder="Enter Note Text"></textarea>
+    </mat-form-field>  
+  </div>
+  <div class="noteButton">
+    <button mat-button (click)="takeNote()" value='Save'>Save</button>
+  </div>
+</mat-expansion-panel>

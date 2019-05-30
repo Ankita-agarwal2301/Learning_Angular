@@ -13,10 +13,11 @@ import { log } from 'util';
   //as we dont want it to be available across app
 )
 export class NoteService {
-  notes: Array<Note> = [];
+  notes: Array<Note>;
   //object o0f behaviour subject
   noteSubject = new BehaviorSubject<Array<Note>>(this.notes);
   constructor(private httpclient: HttpClient, private authService: AuthenticationService) {
+    this.notes=[];
     this.fetchNotes();
   }
 

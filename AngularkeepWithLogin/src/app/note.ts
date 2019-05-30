@@ -4,6 +4,8 @@ export class Note{
     text:string
     constructor()
     {
-       
+        this.title='';
+        this.text=''
+
     }
 }
