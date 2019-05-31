@@ -16,10 +16,10 @@ import { Note } from './note';
 })
 export class AppComponent {
 
-constructor(private noteService : NoteService)
-{
-  console.log("constuctor");
-  }
+// constructor(private noteService : NoteService)
+// {
+//   console.log("constuctor");
+//   }
   ngOnInit()
   {
   }

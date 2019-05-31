@@ -153,8 +153,16 @@ Stub is a class created  , and we tell dont use actual class but use our stub
       }],       
 
 
-	  
-	  
+ ----------------------------------------------------
+ ## NEW SESSION End to end Testing 
+
+ - check complete flow
+ - `npm run e2e` or `ng e2e`
+ - code in folder e2e 
+ - protractor : helps to perform e2e and configuration in protractor.conf.js
+ - app needs to ineract with server . so auth server should be running
+ - 
+ 
 
 
 

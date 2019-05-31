@@ -44,15 +44,20 @@ import { EditViewComponent } from './edit-view/edit-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
 const routes: Routes = [
-  {
-    //http://localhost:4200/login
-    path: '',
-    component: LoginComponent
-  },
+  // {
+  //   //http://localhost:4200/login
+  //   path: '',
+  //   component: LoginComponent
+  // },
   {
     //http://localhost:4200/login
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: '',
+    redirectTo : 'login',
+    pathMatch: 'full'
   },
   {
     //http://localhost:4200/dashboard
@@ -76,10 +81,6 @@ const routes: Routes = [
       component: EditOpenerComponent,
       outlet: 'noteEditOutlet'
     }]
-  },
-  {
-    path: '',
-    component: LoginComponent,
   }
 ]
 @NgModule({

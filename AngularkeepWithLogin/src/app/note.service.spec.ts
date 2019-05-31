@@ -52,7 +52,7 @@ fdescribe('NoteService', () => {
     })
   })
 
-  it('should call addNote with right API', () => {
+  it('should call addNote with right API call with right http method and right parameter and updates the note subject', () => {
     let testNote1 = {
       id: 111,
       title: 'aa',
