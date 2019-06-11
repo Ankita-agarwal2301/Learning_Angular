@@ -1,4 +1,4 @@
-<mat-card (click)="editNote()">
+<mat-card [appNoteState]="note.state"  appHover (click)="editNote()">
   <mat-card-title>{{note.title}}</mat-card-title>
   <mat-card-content>{{note.text}}</mat-card-content>
 

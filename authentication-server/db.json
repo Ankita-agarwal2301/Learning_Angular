@@ -3,57 +3,68 @@
     {
       "title": "Read",
       "text": "Hello",
-      "id": 1
+      "id": 1,
+	  "state" : "not-started"
     },
     {
       "id": 2,
       "title": "Call Ravi",
-      "text": "Track the new submissions"
+      "text": "Track the new submissions",
+	  "state" : "started"
     },
     {
       "title": "Capitalismm",
       "text": "Mark Twain",
-      "id": 3
+      "id": 3,
+	  "state" : "not-started"
     },
     {
       "title": "Virat and Anushka's Reception",
       "text": "Sing \"Channa Mereya\"",
-      "id": 4
+      "id": 4,
+	  "state" : "not-started"
     },
     {
       "title": "qwsqws",
       "text": "wqsw",
-      "id": 5
+      "id": 5,
+	  "state" : "not-started"
     },
     {
       "title": "Captain of Black Pearl",
       "text": "Captain Jack Sparrow",
-      "id": 6
+      "id": 6,
+	  "state" : "started"
     },
     {
       "title": "Test Note",
       "text": "Testing Note with Auth Server",
-      "id": 7
+      "id": 7,
+	  "state" : "not-started"
     },
     {
       "title": "Dummy Note",
       "text": "This is dummy note for testing purpose",
-      "id": 8
+      "id": 8,
+	  "state" : "completed"
     },
     {
       "title": "New Noteeee",
       "text": "this is my new note for testing",
-      "id": 9
+      "id": 9,
+	  "state" : "not-started"
     },
     {
       "title": "a",
       "text": "a",
-      "id": 10
+      "id": 10,
+	  "state" : "not-started"
     },
     {
       "title": "test",
       "text": "ing",
-      "id": 11
+      "id": 11,
+	  "state" : "not-started"
     }
   ]
 }

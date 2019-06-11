@@ -163,11 +163,29 @@ Stub is a class created  , and we tell dont use actual class but use our stub
  - app needs to ineract with server . so auth server should be running
  - 
  
+## NEW SESSION : Directives
+There are three kinds of directives in Angular:
+
+- `Components` — directives with a template.(automaticaaly gets created , so user defined)
+- `Structural directives` — change the DOM layout by adding and removing DOM elements.(NgFor and NgIf)
+- `Attribute directives` — change the appearance or behavior of an element, component, or another directive.(NgStyle)
+
+[Attribute directive Reference](https://angular.io/guide/attribute-directives)
+[Structural directive Reference](https://angular.io/guide/structural-directives) 
 
 
+- create directive
+ng g d 
 
+## Real time deployment :
 
-  
+ng build --prod
+
+it willl create a dist folder with all code as static files
+so using http server you can run your application
+http-server dist/angularkeep
+
+http://localhost:8080
 
 
 

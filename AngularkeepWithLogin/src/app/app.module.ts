@@ -42,6 +42,8 @@ import { EditOpenerComponent } from './edit-opener/edit-opener.component';
 import { EditViewComponent } from './edit-view/edit-view.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { HoverDirective } from './hover.directive';
+import { NoteStateDirective } from './note-state.directive';
 
 const routes: Routes = [
   // {
@@ -94,7 +96,9 @@ const routes: Routes = [
     ListViewComponent,
     NoteComponent,
     EditOpenerComponent,
-    EditViewComponent
+    EditViewComponent,
+    HoverDirective,
+    NoteStateDirective
   ],
   imports: [
     BrowserModule,
